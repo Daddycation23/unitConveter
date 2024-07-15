@@ -87,7 +87,29 @@ def button_clicked():
             ("oz", "kg"): 0.0283495,
             ("kg", "oz"): 1 / 0.0283495,
             ("oz", "lb"): 0.0625,
-            ("lb", "oz"): 1 / 0.0625
+            ("lb", "oz"): 1 / 0.0625,
+            ("tonne", "kg"): 1000,
+            ("kg", "tonne"): 1 / 1000,
+            ("lb", "tonne"): 0.000453592,
+            ("tonne", "lb"): 1 / 0.000453592,
+            ("tonne", "Imperial ton"): 0.984207,
+            ("Imperial ton", "tonne"): 1/ 0.984207,
+            ("Imperial ton", "lb"): 2240,
+            ("lb", "Imperial ton"): 1 / 2240,
+            ("Imperial ton", "oz"): 35840,
+            ("oz", "Imperial ton"): 1/ 35840,
+            ("tonne", "US ton"): 1.10231,
+            ("US ton", "tonne"): 1 / 1.10231,
+            ("US ton", "Imperial ton"): 0.892857,
+            ("Imperial ton", "US ton"): 1 / 0.892857,
+            ("US ton", "lb"): 2000,
+            ("lb", "US ton"): 1 / 2000,
+            ("US ton", "oz"): 32000,
+            ("oz", "US ton"): 1 / 32000,
+            ("US ton", "kg"): 907.185,
+            ("kg", "US ton"): 1 / 907.185,
+            ("Imperial ton", "kg"): 1016.05,
+            ("kg", "Imperial ton"): 1 / 1016.05,
             # Add more conversions as needed
         }
 
@@ -112,8 +134,8 @@ def length_conversion():
 
 # Function to set up mass conversion options
 def mass_conversion():
-    combo_1.config(values=["kg", "g", "lb", "oz"])
-    combo_2.config(values=["kg", "g", "lb", "oz"])
+    combo_1.config(values=["kg", "g", "lb", "oz", "tonne", "Imperial ton", "US ton"])
+    combo_2.config(values=["kg", "g", "lb", "oz", "tonne", "Imperial ton", "US ton"])
     combo_1.current(0)
     combo_2.current(1)
 
